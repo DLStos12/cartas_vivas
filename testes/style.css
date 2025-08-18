@@ -1,0 +1,239 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2e8d5;
+}
+
+.hero {
+  background-image: url('../img/bible01.png');
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  height: 100vh;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: -1rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.buttons button {
+  margin: 0 0.5rem;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffd700;
+  color: #333;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+a:visited {
+  color: #1a1a1a;            /* Mantém a mesma cor */
+  text-decoration: none;
+}
+
+.buttons-return button {
+  align-content: 0px 50px;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #dca951;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+
+}
+
+.devocionais {
+  padding: 2rem;
+}
+
+.devocionais h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.categorias {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+.devocional-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.devocional {
+  background-color: white;
+  padding: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.msc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d8d7e1;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.devocional h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+.devocional h4 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+.artigo h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+.artigo h4 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.msc-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  background-color: #d8d7e1;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  
+  
+}
+
+.devocional p {
+  color: #555;
+}
+
+.devocional a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  
+}
+
+.sub_devocional {
+  position: relative;
+  padding: 1.2rem;
+  border-radius: 8px;
+  color: #3b2f1d;
+  transition: transform 0.3s ease;
+  background-image: url(img/bg-sub-dev.jpg);
+  background-position: center;
+  background-clip: unset;
+  display: inline-block;
+  width: 350px;
+}
+
+.sub_devocional-container {
+  display: flex;
+  gap: 1rem; /* Espaço entre as caixas */
+}
+
+.devocional-desenvolvimento {
+  background-color: white;
+  padding: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 1000px;
+}
+
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+}
+
+/* Teste de barra de rolagem personalizada */
+.artigos-container {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  display: grid;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 16px;
+  scrollbar-width: thin; /* Firefox */
+}
+
+.artigo {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  background-color: white;
+  padding: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Fundo escuro */
+#popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Caixa do pop-up */
+#popup-content {
+  background: white;
+  width: 300px;
+  padding: 20px;
+  margin: 15% auto;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Botão de fechar */
+#fechar {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#fechar:hover {
+  background-color: #0056b3;
+}
