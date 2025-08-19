@@ -88,13 +88,6 @@ a:visited {
   gap: 1.5rem;
 }
 
-.devocional {
-  background-color: white;
-  padding: 1.2rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 .msc {
   display: flex;
   justify-content: center;
@@ -105,6 +98,13 @@ a:visited {
   text-align: center;
 }
 
+.devocional {
+  background-color: white;
+  padding: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .devocional h3 {
   margin-top: 0;
   color: #2c3e50;
@@ -113,13 +113,19 @@ a:visited {
   margin-top: 0;
   color: #2c3e50;
 }
-.artigo h3 {
-  margin-top: 0;
-  color: #2c3e50;
+
+.devocional p {
+  text-align: justify;
+  color: #555;
 }
-.artigo h4 {
-  margin-top: 0;
-  color: #2c3e50;
+
+.devocional a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  
 }
 
 .msc-container {
@@ -132,19 +138,6 @@ a:visited {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   
-  
-}
-
-.devocional p {
-  color: #555;
-}
-
-.devocional a {
-  display: inline-block;
-  margin-top: 1rem;
-  color: #007bff;
-  text-decoration: none;
-  font-weight: bold;
   
 }
 
@@ -166,14 +159,25 @@ a:visited {
   gap: 1rem; /* Espaço entre as caixas */
 }
 
+.sub_devocional p {
+  text-align: justify;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
 .devocional-desenvolvimento {
   background-color: white;
-  padding: 1.2rem;
+  padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 1000px;
 }
 
+.devocional-desenvolvimento p {
+  text-align: justify;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
 
 .video-container {
   display: flex;
@@ -184,22 +188,65 @@ a:visited {
 
 /* Teste de barra de rolagem personalizada */
 .artigos-container {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  display: grid;
+  display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding: 16px;
-  scrollbar-width: thin; /* Firefox */
+  gap: 16px;
+  padding: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
 }
 
-.artigo {
-  flex: 0 0 auto;
+.scroll-box {
+  min-width: 200px;
+  height: 250px;
+  background-color: #eee;
+  border-radius: 8px;
+  flex-shrink: 0;
   scroll-snap-align: start;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+.artigo {
+  position: relative;
   background-color: white;
   padding: 1.2rem;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.artigo h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.artigo h4 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.artigo h4 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.artigo p {
+  text-align: justify;
+  color: #555;
+}
+
+.artigo a {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 10px;
+  margin-top: 1rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  align-items: end;
 }
 
 /* Fundo escuro */
