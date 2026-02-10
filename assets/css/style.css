@@ -1,0 +1,617 @@
+@charset "UTF-8";
+
+:root {
+  --color-background: #fdf6ec;       /* Bege claro */
+  --color-primary: #c49a6c;          /* Dourado suave */
+  --color-secondary: #8b5e3c;        /* Marrom médio */
+  --color-section: #f1e1cc21;           
+  --color-section1: #f1e1cc;           
+  --color-accent: #e8d3b9;           /* Bege rosado */
+  --color-main: #ffedd879;           /* Bege rosado */
+  --color-text: #3e2f1c;             /* Marrom escuro */
+  --color-h2: #462b08;             /* Marrom escuro */
+  --color-heading: #5a3e2b;          /* Marrom profundo */
+  --color-button: #c49a6c;           /* Dourado suave */
+  --color-button-hover: #a87f54;     /* Dourado escuro */
+  --color-border: #d8c2a6;           /* Bege acinzentado */
+}
+
+:root {
+  --font-primary: 'Merriweather', serif;
+  --font-secondary: 'Open Sans', sans-serif;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-primary);
+  box-sizing: border-box;
+}
+
+body{
+  height: auto;
+  min-height: 98dvh;
+  background-color:var(--color-background);
+  overflow-x: auto;
+  width: 100%;
+  max-width: 100%;
+ }
+
+ /* Inicio do Cabeçalho */
+header{
+  background-image: url('../image/header-background-widescream.png');
+  background-position: left bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Icone logo e Titulo */
+.titulo{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.titulo h1{
+  color: var(--color-text);
+  margin-top: 12px;
+}
+
+.titulo img{
+  width: 80px;
+  height: auto;
+}
+
+/* Barra de navegação */
+.navbar{
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+  justify-content: space-between;
+  background-color: var(--color-accent);
+  padding: 5px;
+
+}
+
+.navbar nav{
+  margin: auto;
+}
+
+.navbar a{
+  display: inline-block;
+  margin-right: 20px;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: 0.1s;
+  font-size: 20px;
+}
+
+.navbar a:hover{
+  color: var(--color-secondary);
+  transform: scale(1.1);
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+}
+
+/* Fim do Cabeçalho */
+
+/* Config do main */
+main{
+  background-color: var(--color-main);
+  margin: auto;
+  width: 100%;
+}
+
+/* Inicio do Section */
+.conteudo{
+  display: flex;
+  width: 100%;
+}
+
+/* Aba de sugestões de videos */
+.sugestao{
+  background-color: var(--color-section);
+  width: 600px;
+  margin: auto;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+}
+
+/* Texto das Sugestão */
+.sugestao h2{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: var(--color-h2);
+}
+
+.sugestao p{
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+/* Botões de seleção de aba*/
+.sugestao button{
+  background-color: var(--color-button);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.295);
+  transition: 0.3s;
+  margin-right: 5px;
+  height: 40px;
+  width: 130px;
+}
+
+.sugestao button:hover{
+  background-color: var(--color-button-hover);
+}
+
+.sugestao button:active{
+  transform: scale(0.9);
+}
+
+/* Aba de videos sugestivos */
+.lista-sugestao{
+  background-color: var(--color-section);
+  margin-top: 20px;
+  width: 98%;
+  
+}
+
+.videos{
+  background-color: var(--color-section);
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.253);
+  border-radius: 5px;
+  padding: 10px;
+  width: 250px;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.videos h3{
+  height: 60px;
+}
+
+.videos p{
+  text-align: center;
+}
+
+.videos img{
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.videos:hover{
+  transform: scale(1.1);
+}
+
+/* Funcionalidade dos  botões sugestões */
+.sermao{
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  gap: 20px;
+  transition: opacity 1s ease;
+
+}
+
+.devocional{
+  display: none;
+  transition: opacity 1s ease;
+}
+
+.louvores{
+  display: none;
+  transition: opacity 1s ease;
+}
+
+/* Player Principal */
+.player-principal{
+  background-color: var(--color-section1);
+  margin: auto;
+  margin-top: 22px;
+  width: 800px;
+  height: 600px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.253);
+}
+
+.player{
+  width: 100%;
+  position: relative;
+  padding-top: 56.25%; /* Proporção 16:9 */
+  margin-bottom: 20px;
+}
+
+.player iframe{
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  width: 95%;
+  height: 100%;
+  border: 2px solid var(--color-border);
+  border-radius: 5px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.253);
+}
+
+
+/* Botões do player */
+.player-bt{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 10px;
+
+}
+
+.player-bt button{
+  background-color: var(--color-button);
+  border: none;
+  border-radius: 50px;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.295);
+  transition: 0.3s;
+  height: 60px;
+  width: 220px;
+} 
+
+.player-bt button p{
+  color: var(--color-text);
+  font-size: 18px;
+}
+
+.player-bt button:hover{
+  background-color: var(--color-button-hover);
+}
+
+.player-bt button:active{
+  transform: scale(0.9);
+}
+
+/* Player da recomendação */
+.recomendado{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.recomendado.active {
+  display: flex;
+}
+
+.foot-recomendado{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.foot-recomendado h2{
+  font-size: 30px;
+  background-color: var(--color-button);
+  padding: 10px ;
+  border-radius: 5px;
+}
+
+.recomendado button{
+  background-color: var(--color-button);
+  border: none;
+  border-radius: 50px;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.295);
+  transition: 0.3s;
+  height: 60px;
+  width: 220px;
+  margin-right: 150px;
+  font-size: 18px;
+} 
+
+.recomendado button:hover{
+  background-color: var(--color-button-hover);
+}
+
+/* Vericulo da semana */
+#abaVersiculo{
+  display: none;
+}
+
+.rec-container{
+  display: flex;
+}
+
+.rec-container img{
+  width: 30%;
+  border: 1px solid black;
+  margin: auto;
+  margin-right: 5px;
+}
+
+.reflexao{
+  background-color: var(--color-button);
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin: auto;
+  margin-left: 0;
+  width: 900px;
+  height: 460px;
+}
+
+#abaVersiculo button{
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+/* Banner Biblia Online */
+.biblia-on{
+  background-image: url("../image/biblia-on-backgroung-wide.png");
+  background-size: cover;
+  background-position: 0px -420px;
+  background-repeat: no-repeat;
+
+  margin: auto;
+  margin-top: 20px;
+  width: 98%;
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.253);
+  border: 2px solid var(--color-border);
+}
+
+.biblia-on h2{
+  color: var(--color-heading);
+  padding-top: 20px;
+  margin-left: 20px;
+  font-size: 40px;
+}
+
+.biblia-on p{
+  color: var(--color-heading);
+  margin-left: 20px;
+  width: 600px;
+  font-size: 30px;
+}
+
+.biblia-on button{
+  background-color: rgb(243, 103, 17);
+  border: none;
+  border-radius: 50px;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.295);
+  transition: 0.3s;
+  height: 80px;
+  width: 350px;
+  margin-left: 30px;
+  margin-top: 10px;
+  font-size: 30px;
+  color: var(--color-h2);
+}
+
+.biblia-on button:hover{
+  background-color: rgb(202, 91, 21);
+}
+
+.biblia-on button:active{
+  transform: scale(0.9);
+}
+
+
+/* Pedidos de Oração */
+.pedidos{
+  background-image: url("../image/pedidos-background.png");
+  background-size: cover;
+  background-position: 0px -420px;
+  margin: auto;
+  margin-top: 20px;
+  width: 98%;
+  height: 515px;
+  border-radius: 5px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.253);
+  text-align: right;
+}
+
+.pedidos h1{
+  color: var(--color-heading);
+  padding-top: 20px;
+  margin-right: 40px;
+  font-size: 60px;
+}
+
+.pedidos p{
+  color: var(--color-heading);
+  font-size: 30px;
+  text-align: justify;
+  margin-left: 40px;
+  width: 500px;
+  margin-left: 64%;
+}
+
+.pedidos input{
+  display: block;
+  margin-left: auto;        /* empurra pra direita */
+  margin-right: 50px;
+  margin-top: 10px;
+  width: 500px;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+}
+
+.pedidos input:focus{
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#pedido{
+  height: 200px;
+}
+
+.pedidos button{
+  background-color: rgb(243, 103, 17);
+  border: none;
+  border-radius: 50px;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.295);
+  transition: 0.3s;
+  height: 50px;
+  width: 200px;
+  margin-right: 50px;
+  font-size: 20px;
+  color: var(--color-h2);
+}
+
+.pedidos button:hover{
+  background-color: rgb(202, 91, 21);
+}
+
+.pedidos button:active{
+  transform: scale(0.9);
+}
+
+#menssagem{
+  margin-top: -45px;
+  font-size: 20px;
+  width: 280px;
+}
+/* Footer */
+footer{
+  background-color: var(--color-background);
+  color: var(--color-text);
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  display: flex;
+}
+
+/* Sobre o projeto */
+.sobre{
+  width: 100%;
+}
+
+.sobre h3{
+  color: var(--color-heading);
+  padding-top: 20px;
+  font-size: 30px;
+}
+
+.sobre p{
+  text-align: justify;
+  margin: auto;
+  width: 80%;
+  font-size: 18px;
+}
+
+/* PArte da aba sobre nós */
+.person-container{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.colab h3{
+  padding-top: 20px;
+  font-size: 25px;
+}
+
+.colab a{
+  text-decoration: none;
+  color: var(--color-heading);
+  display: flex;
+}
+
+.person{
+  display: flex;
+  text-align: center;
+}
+
+.person p{
+  margin: auto;
+  margin-left: 0;
+  font-size: 20px;
+  width: 200px;
+  text-align: start;
+}
+
+.person img{
+  width: 100px;
+  margin: auto;
+  margin-right: 1px;
+}
+
+hr{
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 80%;
+  border: 1px solid var(--color-border);
+}
+
+/* Loader */
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-background);
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.loader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader-spinner {
+  border: 8px solid var(--color-border);
+  border-top: 8px solid var(--color-primary);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader p {
+  margin-top: 20px;
+  color: var(--color-heading);
+  font-size: 18px;
+  font-weight: bold;
+}

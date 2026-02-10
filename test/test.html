@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="oracao">
+  <h2>Pedidos de Oração</h2>
+
+  <form id="formOracao">
+    <input 
+      type="text" 
+      id="nome" 
+      placeholder="Seu nome" 
+      required
+    />
+
+    <textarea 
+      id="pedido" 
+      placeholder="Digite seu pedido de oração"
+      required
+    ></textarea>
+
+    <button type="submit">Enviar Pedido</button>
+
+    <p id="mensagem"></p>
+  </form>
+</section>
+
+<script>
+document.getElementById("formOracao")
+.addEventListener("submit", function(e) {
+
+  e.preventDefault();
+
+  const nome = document.getElementById("nome").value;
+  const pedido = document.getElementById("pedido").value;
+
+  const url =
+  "https://docs.google.com/forms/d/e/1FAIpQLSfKUPNDPNNOSDrS2U4-IZA67xf9aeJnhcPrTESgR4y-ECwceg/formResponse";
+
+  const dados = new FormData();
+
+  // CAMPOS DO SEU FORMULÁRIO
+  dados.append("entry.1468757078", nome);
+  dados.append("entry.1316032664", pedido);
+
+  fetch(url, {
+    method: "POST",
+    mode: "no-cors",
+    body: dados
+  }).then(() => {
+
+    document.getElementById("mensagem").innerText =
+      "Pedido enviado! Estaremos orando por você 🙏";
+
+    document.getElementById("formOracao").reset();
+  });
+});
+</script>
+
+</body>
+</html>

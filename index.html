@@ -4,130 +4,278 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cartas Vivas</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsivo.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-
-<!-- Botões Navegação -->
-  <nav class="navbar">
-    <ul class="menu">
-      <li><a href="index.html">Início</a></li>
-      
-      <li class="dropdown">
-        <a href="#">Publicações</a>
-        <ul class="submenu">
-          <li><a href="Devocionais/todos-dev.html" >Devocionais</a></li>
-          <li><a href="Sermões/todos-ser.html" >Pregações</a></li>
-          <li><a href="index-video.html" >Videos</a></li>
-        </ul>
-      </li>
-      
-      <li class="dropdown">
-        <a href="#">Estude a Biblia</a>
-        <ul class="submenu">
-          <li><a href="https://www.bible.com/pt/bible/129/GEN.1.NVI" target="_blank" link="external">Biblia Online</a></li>
-          <li><a href="https://bibleai.com/pt" target="_blank" link="external">Biblia IA</a></li>
-        </ul>
-      </li>
-      
-      <li class="dropdown"><a href="#">Sobre</a>
-        <ul class="submenu">
-            <li><a href="index-qm.html">Quem Somos</a></li>
-          </ul>
-        </li>
-  </nav>
-
-  <!-- Estrutura do pop-up -->
-  <div id="popup">
-    <div id="popup-content">
-      <h2>Bem-vindo à página!</h2>
-      <img src="img/vdiario.jpg" alt="Versiculo do Dia">
-      <button id="fechar">Fechar</button>
-    </div>
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-spinner"></div>
+    <p>Carregando...</p>
   </div>
 
-  <!-- Header com imagem de fundo e título -->
-  <header class="hero">
-    <div class="overlay">
+  <header>
+    <div class="titulo">
+      <img src="assets/image/logo.png" alt="logo">
       <h1>Cartas Vivas</h1>
-      <br>
-      <h3>Onde a fé se fortalece diariamente.</h3>
-      <br>
-      <p>"Vocês mesmos são a nossa carta, escrita em nosso coração, conhecida e lida por todos." - <b>2 Coríntios 3:2</b></p>
-      
-      <div class="buttons">
-        <button><a href="index.html">Devocionais</a></button>
-        <button><a href="index-video.html">Videos</a></button>
-      </div>
+    </div>
+    <div class="navbar">
+      <nav>
+          <a href="index.html">Inicio</a>
+          <a href="https://www.youtube.com/@CartasVivasBrasil" target="_blank">Canal no Youtube</a>
+          <a href="sobre.html">Sobre nós</a>
+      </nav>
     </div>
   </header>
+  <main>
+    <section>
+      <!-- Conteudo principal -->
+      <div class="conteudo">
+        <div class="sugestao">
+          <!-- Titulo -->
+          <div class="sugestao-tutilo">
+            <h2>Pregações em Video</h2>
+            <p>
+              Explore nossa coleção de pregações, devocionais e louvores. Cada conteúdo foi selecionado para fortalecer sua fé e aproximá-lo de Deus.
+            </p>
+          </div>
 
-  <!-- Navegação -->
-  <main class="devocionais">
-    <h2>Ultimos Devocionais</h2>
+          <!-- Botões de navegação -->
+          <div class="sugestao-buttons">
+            <button onclick="mostrarSermao()">Pregações</button>
+            <button onclick="mostrarDevocional()">Devocionais</button>
+            <button onclick="mostrarLouvores()">Louvores</button>
+          </div>
 
-    <div class="devocional-lista">
+          <!-- Lista de Videos -->
+          <div class="lista-sugestao">
 
-      
-      <div class="artigo">
-        <h4>26/08/2025</h4>
-        <h3>Uma vida de de devoção</h3>
-        <hr>
-        <p>a felicidade daqueles que buscam a Deus de todo o coração, e do Salmo 150:6, que chama todo ser vivente a louvar ao Senhor.</p> <br>
-        <a href="Devocionais/dev07.html">Ler mais</a> 
+            <!-- Preações -->
+            <div class="sermao" id="sermao1">
+              <!-- Pregação 01 -->
+              <div class="videos" onclick="trocarVideo('ICVTMO5Nwio')">
+                <img src="https://img.youtube.com/vi/ICVTMO5Nwio/maxresdefault.jpg"
+                alt="pregação001"
+                style="width: 100%; cursor: pointer;">
+                <h3>O Sehor Acrescenta</h3>
+                <p>Pr. Adervan Amancio</p>
+              </div>
+
+              <!-- Pregação 02 -->
+              <div class="videos" onclick="trocarVideo('LN5JuH2Ucbc')">
+                <img src="https://img.youtube.com/vi/LN5JuH2Ucbc/maxresdefault.jpg"
+                alt="Pregação 002"
+                style="width: 100%; cursor: pointer;"
+                >
+                <h3>A finalidade do Mandamento</h3>
+                <p>Pr. Adervan Amancio</p>
+              </div>
+
+              <!-- Pregação 03 -->
+              <div class="videos" onclick="trocarVideo('IK4ym_ihBkE')">
+                <img src="https://img.youtube.com/vi/IK4ym_ihBkE/maxresdefault.jpg"
+                alt="Pregação 003"
+                style="width: 100%; cursor: pointer;">
+                <h3>Os Grandes Feitos do Senhor</h3>
+                <p>Pr. Adervan Amancio</p>
+              </div>
+
+              <!-- Pregação 04 -->
+              <div class="videos" onclick="trocarVideo('-_MXiWysTFI')">
+                <img src="https://img.youtube.com/vi/-_MXiWysTFI/maxresdefault.jpg"
+                alt="Pregação 004"
+                style="width: 100%; cursor: pointer;">
+                <h3>Preciso de ti, Querido Irmão!</h3>
+                <p>Pr. Adervan Amancio </p>
+              </div>
+            </div>
+
+            <!-- Devocionais -->
+            <div class="devocional">
+              <!-- Devocional 01 -->
+              <div class="videos" onclick="trocarVideo('XwWrZGThDH4')">
+                <img src="https://img.youtube.com/vi/XwWrZGThDH4/maxresdefault.jpg"
+                alt="Devocional 001 - A provisão e o renovo de Deus"
+                style="width: 100%; cursor: pointer;">
+                <h3>A provisão e o renovo de Deus</h3>
+                <p>Madson Almeida</p>
+              </div>
+
+              <!-- Devocional 02 -->
+              <div class="videos" onclick="trocarVideo('q46abrcYKTIXwWrZGThDH4')">
+                <img src="https://img.youtube.com/vi/q46abrcYKTI/maxresdefault.jpg"
+                alt="Devocional 002"
+                style="width: 100%; cursor: pointer;">
+                <h3>O Desgaste do Corpo</h3>
+                <p>Madson Almeida</p>
+              </div>
+
+              <!-- Devocional 03 -->
+              <div class="videos" onclick="trocarVideo('5EAXAGWfo2A')">
+                <img src="https://img.youtube.com/vi/5EAXAGWfo2A/maxresdefault.jpg"
+                alt="Devocional 003"
+                style="width: 100%; cursor: pointer;">
+                <h3>Mudar para Viver o Novo de Deus</h3>
+                <p>Madson Almeida</p>
+              </div>
+
+              <!-- Devocional 04 -->
+              <div class="videos" onclick="trocarVideo('M_PJJYzDZQ4')">
+                <img src="https://img.youtube.com/vi/M_PJJYzDZQ4/maxresdefault.jpg"
+                alt="Devocional 004"
+                style="width: 100%; cursor: pointer;">
+                <h3>O inequivoco Chamado de Deus</h3>
+                <p>Madson Almeida</p>
+              </div>
+            </div>
+
+            <!-- Louvores -->
+             <div class="louvores">
+
+              <!-- Louvor 1 -->
+               <div class="videos" onclick="trocarVideo('FERwtg90FQg')">
+                <img src="https://img.youtube.com/vi/FERwtg90FQg/maxresdefault.jpg"
+                alt="Louvor 001"
+                style="width: 100%; cursor: pointer;">
+                <h3>O Meu Jardim</h3>
+                <p>Madson Almeida</p>
+               </div>
+
+              <!-- Louvor 2 -->
+               <div class="videos" onclick="trocarVideo('_A5CAeK2-Cg')">
+                <img src="https://img.youtube.com/vi/_A5CAeK2-Cg/maxresdefault.jpg"
+                alt="Louvor 002"
+                style="width: 100%; cursor: pointer;">
+                <h3>O que Ele esta Fazendo</h3>
+                <p>Madson Almeida</p>
+             </div>
+
+              <!-- Louvor 3 -->
+               <div class="videos" onclick="trocarVideo('kQtuMU6DzjQ')">
+                <img src="https://img.youtube.com/vi/kQtuMU6DzjQ/maxresdefault.jpg"
+                alt="Louvor 03"
+                style="width: 100%; cursor: pointer;">
+                <h3>Dia de Batismo</h3>
+                <p>Madson Almeida</p>
+             </div>
+
+              <!-- Louvor 4 -->
+               <div class="videos" onclick="trocarVideo('Cirk8MtvdYM')">
+                <img src="https://img.youtube.com/vi/Cirk8MtvdYM/maxresdefault.jpg"
+                alt="Louvor 004"
+                style="width: 100%; cursor: pointer;">
+                <h3>Um Camiho Melhor</h3>
+                <p>Madson Almeida</p>
+             </div>
+             </div>
+        </div>
+        </div>
+
+            <!-- Player Principal -->
+            <div class="player-principal">
+              <div class="player">
+                 <!-- AQUI entra o vídeo -->
+                <iframe
+                  id="player"
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/M_PJJYzDZQ4"
+                  frameborder="0"
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <div class="player-bt">
+                  <button onclick="abrirRecomendado()"><p>Fortaleça sua Fé</p></button>
+                  <button onclick="abrirVersiculo()"><p>Versiculo da Semana</p></button>
+                </div>
+            </div>
       </div>
 
-    <div class="artigo">
-      <h4>26/08/2025</h4>
-      <h3>O Bom Samaritano </h3>
-      <hr>
-      <p>uma reflexão sobre a parábola do bom samaritano, narrada em Lucas 10:33-35, destacando que, embora seja uma história fictícia contada por Jesus, ela representa uma situação possível e nos convida a pensar sobre nossa postura diante do próximo.</p> <br>
-      <a href="Devocionais/dev06.html">Ler mais</a> 
-    </div>
-    
-    <div class="artigo">
-      <h4>26/08/2025</h4>
-      <h3>Você será uma bênção</h3>
-      <hr>
-      <p>O chamado de Deus a Abraão em Gênesis 12:1-3, destaca que, mais do que receber bênçãos, Abraão foi chamado para ser uma bênção. A passagem mostra que aqueles ao seu redor, como seu sobrinho Ló, também foram abençoados enquanto estavam próximos dele, revelando que há pessoas chamadas para abençoar e outras que são alcançadas por essas bênçãos.</p> <br>
-      <a href="Devocionais/dev05.html">Ler mais</a> 
-    </div>
-  </div>
+      <!-- Player recoendação -->
 
-    <h3 style="text-align: end;"><a href="Devocionais/todos-dev.html">ver todos</a></h3>
+      <div class="recomendado" id="abaRecomendado">
+        <iframe
+          id="player"
+          width="90%"
+          height="90%"
+          src="https://www.youtube.com/embed/2KeDBcTJ_bs"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+        <div class="foot-recomendado">
+          <h2>VIVA EM VIGILÂNCIA ESPIRITUAL CONSTANTE - HERNANDES DIAS LOPES</h2>
+          <button onclick="fecharRecomendado()">Fechar</button>
+        </div>
+      </div>
+
+      <div class="recomendado" id="abaVersiculo">
+        <div class="rec-container">
+          <img src="assets/image/versiculo-semanal.png" alt="versiculo-semanal">
+          <div class="reflexao">
+            <h2 style="text-align: center;">Exodo 14:14</h2>
+            <br>
+            <p>
+            Este versículo é um lembrete poderoso de que a salvação e o livramento pertencem ao Senhor. O povo de Israel estava encurralado entre o exército egípcio e o Mar Vermelho, sem saída aparente. Em vez de instruí-los a lutar ou fugir, Moisés declara que o Senhor lutaria por eles. Isso ecoa uma das doutrinas centrais da fé: Deus é soberano em todas as coisas, inclusive na salvação e na proteção de Seu povo.
+              <br>
+            <b>1. Soberania de Deus</b> <br>
+            Deus não é um espectador passivo. Ele é o autor da história, o comandante das batalhas, e o defensor dos seus, nada escapa do Seu controle, nem mesmo os momentos de crise. Êxodo 14:14 nos mostra que o livramento não depende da força humana, mas da ação soberana de Deus.
+              <br>
+            <b>2. Descanso na providência</b> <br>
+            “Fiquem calmos” não é uma sugestão de passividade, mas um chamado à fé. O crente tem que entender que pode descansar porque Deus está agindo. A providência divina não é apenas um conceito teológico, é uma realidade prática que sustenta o cristão em meio ao caos.
+              <br>
+            <b>3. Cristo como nosso guerreiro</b> <br>
+            Neste versiculo vemos Cristo como o cumprimento final. Ele lutou a batalha definitiva contra o pecado e a morte na cruz. O cristão pode “ficar calmo” porque Jesus já venceu. Nossa segurança está na obra consumada de Cristo.
+              <br>
+            Esse versículo nos convida a confiar, descansar e adorar. Não somos chamados a vencer por nós mesmos, mas a crer que o Senhor já venceu por nós. Que essa reflexão nos leve à humildade, à esperança e à paz que excede todo entendimento.
+            </p>
+          </div>
+        </div>
+        <button onclick="fecharVersiculo()">Fechar</button>
+      </div>
+
+
+      <div class="biblia-on">
+        <h2>Biblia Online</h2>
+        <p>
+          Leia a Biblia online e <br>
+          aprofunde seu conhecimento das escrituras
+        </p>
+
+        <a href="https://www.bible.com/pt/bible/129/GEN.1.NVI" target="_blank"><button>Abrir a Biblia</button></a>
+      </div>
+
+      <div class="pedidos">
+        <h1>Pedidos de Oração</h1>
+        <p>
+          Envie seu pedido de oração e <br> nossa equipe intercederá por você!
+        </p>
+
+        <form id="formOracao">
+          <input type="text" 
+          id="nome" 
+          placeholder="Seu nome (opicional)">
+
+          <input type="text" 
+          id="pedido" 
+          placeholder="Seu pedido de oração">
+
+          <button type="submit">Enviar Pedido</button>
+          <p id="menssagem"></p>
+        </form>
+      </div>
+    </section>
   </main>
 
-  <main class="devocionais">
-    <h2>Ultimas Pregações</h2>
-
-    <div class="devocional-lista">
-      <div class="artigo">
-        <h4>13/08/2025</h4>
-        <h3>Edificando Sobre a Rocha</h3>
-        <hr>
-        <p>Assim como uma casa precisa de profissionais qualificados, materiais adequados e fundamentos sólidos, nossa vida precisa ser construída com sabedoria, discernimento e fé em Deus.</p> <br>
-        <a href="Sermões/ser01.html">Ler mais</a>
-      </div>
-      <div class="artigo">
-        <h4>14/08/2025</h4>
-        <h3>Mergulhando em Águas Profundas</h3>
-        <hr>
-        <p>Assim como uma casa precisa de profissionais qualificados, materiais adequados e fundamentos sólidos, nossa vida precisa ser construída com sabedoria, discernimento e fé em Deus.</p> <br>
-        <a href="Sermões/ser02.html">Ler mais</a>
-      </div>
-      <div class="artigo">
-        <h4>14/08/2025</h4>
-        <h3>O Amor aos Cativos</h3>
-        <hr>
-        <p>Assim como uma casa precisa de profissionais qualificados, materiais adequados e fundamentos sólidos, nossa vida precisa ser construída com sabedoria, discernimento e fé em Deus.</p> <br> 
-        <a href="Sermões/ser03.html">Ler mais</a>
-      </div>
+  <footer>
+    <div class="sobre">
+      <h3>Projeto Cartas Vivas</h3>
+      <p>
+        Cartas Vivas é uma plataforma digital dedicada ao fortalecimento da fé cristã. Oferecemos pregações em vídeo, acesso à Bíblia online e um espaço para compartilhar pedidos de oração. Nossa missão é conectar a comunidade cristã, proporcionando recursos espirituais e promovendo a intercessão em oração. Acreditamos na transformação de vidas através da Palavra de Deus e da comunhão fraterna.</p>
     </div>
-    <h3 style="text-align: end;"><a href="Sermões/todos-ser.html">ver todos</a></h3>
+  </footer>
 
-  </main>
-   <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
