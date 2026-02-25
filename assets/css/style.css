@@ -43,7 +43,10 @@ header{
   background-position: left bottom;
   background-size: cover;
   background-repeat: no-repeat;
+  height: 130px;
 }
+
+
 
 /* Icone logo e Titulo */
 .titulo{
@@ -52,9 +55,10 @@ header{
   justify-content: center;
 }
 
-.titulo h1{
-  color: var(--color-text);
-  margin-top: 12px;
+.titulo h1 {
+  font-size: 48px;
+  letter-spacing: 2px;
+  color:#7c4d10;
 }
 
 .titulo img{
@@ -66,31 +70,31 @@ header{
 .navbar{
   display: flex;
   width: 100%;
-  margin-top: 15px;
-  justify-content: space-between;
-  background-color: var(--color-accent);
+  justify-content: center;
+  background-color: rgba(255,255,255,0.8);
+  backdrop-filter: blur(5px);
+  border-radius: 50px;
+  width: fit-content;
+  margin: 10px auto;
   padding: 5px;
 
 }
 
-.navbar nav{
-  margin: auto;
-}
-
 .navbar a{
   display: inline-block;
-  margin-right: 20px;
   text-decoration: none;
   color: var(--color-text);
-  transition: 0.1s;
   font-size: 20px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-.navbar a:hover{
-  color: var(--color-secondary);
-  transform: scale(1.1);
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
+.navbar a:hover {
+  background-color: var(--color-primary);
+  color: white;
+  text-decoration: none;
 }
 
 /* Fim do Cabeçalho */
@@ -307,7 +311,7 @@ main{
 }
 
 .foot-recomendado h2{
-  font-size: 30px;
+  font-size: 20px;
   background-color: var(--color-button);
   padding: 10px ;
   border-radius: 5px;
@@ -528,42 +532,6 @@ footer{
   font-size: 18px;
 }
 
-/* PArte da aba sobre nós */
-.person-container{
-  display: flex;
-  justify-content: center;
-  margin: auto;
-}
-
-.colab h3{
-  padding-top: 20px;
-  font-size: 25px;
-}
-
-.colab a{
-  text-decoration: none;
-  color: var(--color-heading);
-  display: flex;
-}
-
-.person{
-  display: flex;
-  text-align: center;
-}
-
-.person p{
-  margin: auto;
-  margin-left: 0;
-  font-size: 20px;
-  width: 200px;
-  text-align: start;
-}
-
-.person img{
-  width: 100px;
-  margin: auto;
-  margin-right: 1px;
-}
 
 hr{
   margin: auto;

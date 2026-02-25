@@ -22,6 +22,13 @@
   }
   
   /* Header */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    height: 200px;
+  }
+
   .titulo h1 {
     text-align: center;
     font-size: 24px;
@@ -32,6 +39,13 @@
     width: 60px;
   }
   
+  .navbar nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   .navbar a {
     margin-right: 10px;
     font-size: 16px;
