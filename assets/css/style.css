@@ -38,36 +38,36 @@ body{
  }
 
  /* Inicio do Cabeçalho */
-header{
+.header-custom{
   background-image: url('../image/header-background-widescream.png');
   background-position: left bottom;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 130px;
+  height: 150px;
 }
 
 
 
 /* Icone logo e Titulo */
-.titulo{
+.titulo-custom{
   display: flex;
   margin: auto;
   justify-content: center;
 }
 
-.titulo h1 {
-  font-size: 48px;
+.titulo-custom h1 {
+  font-size: 60px;
   letter-spacing: 2px;
   color:#7c4d10;
 }
 
-.titulo img{
-  width: 80px;
+.titulo-custom img{
+  width: 100px;
   height: auto;
 }
 
 /* Barra de navegação */
-.navbar{
+.navbar-custom{
   display: flex;
   width: 100%;
   justify-content: center;
@@ -80,7 +80,7 @@ header{
 
 }
 
-.navbar a{
+.navbar-custom a{
   display: inline-block;
   text-decoration: none;
   color: var(--color-text);
@@ -91,7 +91,7 @@ header{
   transition: 0.3s;
 }
 
-.navbar a:hover {
+.navbar-custom a:hover {
   background-color: var(--color-primary);
   color: white;
   text-decoration: none;
@@ -156,6 +156,15 @@ main{
   transform: scale(0.9);
 }
 
+.sugestao-tutilo h2{
+  text-align: center;
+}
+
+.sugestao-tutilo p{
+  width: 100%;
+  text-align: center;
+}
+
 /* Aba de videos sugestivos */
 .lista-sugestao{
   background-color: var(--color-section);
@@ -175,7 +184,9 @@ main{
 }
 
 .videos h3{
-  height: 60px;
+  height: 50px;
+  font-size: 22px;
+  font-weight: bolder;
 }
 
 .videos p{
@@ -380,7 +391,7 @@ main{
   margin: auto;
   margin-top: 20px;
   width: 98%;
-  height: 300px;
+  height: 340px;
   border-radius: 5px;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.253);
   border: 2px solid var(--color-border);
@@ -428,12 +439,11 @@ main{
 /* Pedidos de Oração */
 .pedidos{
   background-image: url("../image/pedidos-background.png");
-  background-size: cover;
   background-position: 0px -420px;
   margin: auto;
   margin-top: 20px;
   width: 98%;
-  height: 515px;
+  height: 525px;
   border-radius: 5px;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.253);
   text-align: right;
@@ -452,7 +462,7 @@ main{
   text-align: justify;
   margin-left: 40px;
   width: 500px;
-  margin-left: 64%;
+  margin-left: 55%;
 }
 
 .pedidos input{
@@ -582,4 +592,77 @@ hr{
   color: var(--color-heading);
   font-size: 18px;
   font-weight: bold;
+}
+
+/* Bootstrap */
+.card{
+  margin: 10px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.445);
+}
+
+.card img{
+  width: 100%;
+}
+
+.card-text{
+  width: 250px;
+  text-align: justify;
+  height: 150px;
+}
+
+/* Label de estudo */
+.estudo{
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.445);
+  width: 90%;
+  height: 92%;
+  left: 10%;
+  margin-top: 5px;
+  text-align: center;
+  padding: 10px;
+}
+
+.estudo h2{
+  background-color: var(--color-primary);
+  color: var(--color-h2);
+  width: 400px;
+  margin: auto; 
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.445);
+}
+
+.sugestao-estudo{
+  height: 90%;
+  width: 25%;
+  overflow: hidden;
+  overflow-y: scroll;
+  margin-left: 5%;
+}
+
+.sugestao-estudo h5{
+  text-align: center;
+  position: sticky;
+  top: 0;
+  background-color: var(--color-primary);
+  z-index: 9999;
+  border-radius: 10px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.445);
+}
+
+.container-estudo{
+  display: flex;
+  height: 90%;
+}
+
+.player-principal-estudo{
+  background-color: var(--color-section1);
+  margin: auto;
+  margin-left: 2%;
+  width: 800px;
+  height: 470px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.253);
 }
