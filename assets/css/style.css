@@ -156,6 +156,7 @@ main{
   transform: scale(0.9);
 }
 
+
 .sugestao-tutilo h2{
   text-align: center;
 }
@@ -313,6 +314,10 @@ main{
 
 .recomendado.active {
   display: flex;
+}
+
+.sugestao-mobile, .lista-sugestao-mobile, .sujestao-mobile-titulo, .sugestao-buttons-mobile{
+  display: none;
 }
 
 .foot-recomendado{

@@ -64,6 +64,58 @@ function mostrarLouvores(){
     }, 100);
 }
 
+// Função que troca as abas de videos nas sugestões
+function mostrarSermaoMobile(){
+    const sermao = document.querySelector('.sermao-mobile');
+
+    const sections = document.querySelectorAll('.sermao-mobile, .devocional-mobile, .louvores-mobile');
+    sections.forEach(section => {
+        section.style.display = 'none';
+    });
+
+    sermao.style.display = 'grid';
+    sermao.style.gridTemplateColumns = '1fr 1fr';
+    sermao.style.gap = '20px';
+    sermao.style.opacity = '0';
+    setTimeout(() => {
+        sermao.style.opacity = '1';
+    }, 100);
+}
+
+
+function mostrarDevocionalMobile(){
+    const devocional = document.querySelector('.devocional-mobile');
+
+    const sections = document.querySelectorAll('.sermao-mobile, .devocional-mobile, .louvores-mobile');
+    sections.forEach(section => {
+        section.style.display = 'none';
+    });
+
+    devocional.style.display = 'grid';
+    devocional.style.gridTemplateColumns = '1fr 1fr';
+    devocional.style.gap = '20px';
+    devocional.style.opacity = '0';
+    setTimeout(() => {
+        devocional.style.opacity = '1';
+    }, 100);
+}
+function mostrarLouvoresMobile(){
+    const louvores = document.querySelector('.louvores-mobile');
+
+    const sections = document.querySelectorAll('.sermao-mobile, .devocional-mobile, .louvores-mobile');
+    sections.forEach(section => {
+        section.style.display = 'none';
+    });
+
+    louvores.style.display = 'grid';
+    louvores.style.gridTemplateColumns = '1fr 1fr';
+    louvores.style.gap = '20px';
+    louvores.style.opacity = '0';
+    setTimeout(() => {
+        louvores.style.opacity = '1';
+    }, 100);
+}
+
 
 
 

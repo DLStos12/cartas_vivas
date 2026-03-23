@@ -29,9 +29,10 @@
     height: 200px;
   }
 
-  .titulo h1 {
+  .titulo-custom h1 {
     text-align: center;
-    font-size: 24px;
+    font-size: 34px;
+    margin-top: 5%;
   }
   
   .titulo img {
@@ -53,76 +54,69 @@
   
   /* Main Content */
   .conteudo {
-    flex-direction: column;
-    align-items: center;
+    display:none;
   }
-  
-  /* Sugestão */
-  .sugestao {
-    width: 90%;
-    max-width: 100%;
+
+  .sugestao-mobile, .lista-sugestao-mobile, .sujestao-mobile-titulo, .sugestao-buttons-mobile{
+  display: block;
+  } 
+
+  .sujestao-mobile-titulo{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
   }
+ 
   
-  .sugestao button {
+  .sugestao-buttons-mobile button{
+    display: block;
+    justify-content: center;
+    margin-top: 15px;
+    background-color: var(--color-button);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.295);
+    transition: 0.3s;
+    height: 40px;
     width: 100%;
-    margin-right: 0;
-    margin-bottom: 5px;
   }
-  
-  /* Grid de Vídeos */
-  .sermao,
-  .devocional,
-  .louvores {
-    grid-template-columns: 1fr !important;
+
+  .sugestao-buttons-mobile button:focus{
+    background-color: var(--color-button-hover);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.295);
+    transform: translateY(-2px);
+  } 
+
+  .lista-sugestao-mobile{
+    width: 100%;
+  }
+
+  .sermao-mobile, .devocional-mobile, .louvores-mobile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 15px;
     padding: 10px;
   }
   
   .videos {
-    width: 100%;
+    width: 90%;
     max-width: 300px;
     margin: auto;
+  }
+
+  .videos h3{
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .devocional-mobile, .louvores-mobile{
+    display: none;
   }
   
   /* Player Principal */
   .player-principal {
-    width: 90%;
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-  }
-  
-  .player {
-    padding-top: 56.25%;
-  }
-  
-  .player-bt {
-    flex-direction: column;
-    margin-top: 20px;
-    gap: 10px;
-  }
-  
-  .player-bt button {
-    width: 100%;
-    max-width: 300px;
-  }
-  
-  /* Reflexão e Recomendado */
-  .reflexao {
-    width: 90%;
-    height: auto;
-    max-height: 500px;
-    overflow-y: auto;
-  }
-  
-  .rec-container {
-    flex-direction: column;
-  }
-  
-  .rec-container img {
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 20px;
+    display: none;
   }
   
   /* Bíblia Online */
