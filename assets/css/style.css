@@ -21,6 +21,12 @@
   --font-secondary: 'Open Sans', sans-serif;
 }
 
+@font-face {
+  font-family: "Merriweather";
+  src: url("../fonts/Merriweather-Regular.woff2") format("woff2"),
+        url("../fonts/Merriweather-Regular.woff") format("woff");
+}
+
 *{
   padding: 0;
   margin: 0;
@@ -39,7 +45,7 @@ body{
 
  /* Inicio do Cabeçalho */
 .header-custom{
-  background-image: url('../image/header-background-widescream.png');
+  background-image: url('../image/mobile/header-background-widescream.webp');
   background-position: left bottom;
   background-size: cover;
   background-repeat: no-repeat;
@@ -443,7 +449,7 @@ main{
 
 /* Pedidos de Oração */
 .pedidos{
-  background-image: url("../image/pedidos-background.png");
+  background-image: url("../image/mobile/pedidos-background.webp");
   background-position: 0px -420px;
   margin: auto;
   margin-top: 20px;

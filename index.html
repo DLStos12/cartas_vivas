@@ -4,11 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cartas Vivas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/responsivo.css">
+  <!-- CSS principal -->
+  <link rel="preload" href="assets/css/style.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="assets/css/responsivo.css" as="style" onload="this.rel='stylesheet'">
+
+  <noscript>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsivo.css">
+  </noscript>
+
+
+  <!-- Bootstrap CSS -->
+  <link rel="preload" 
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+  as="style" 
+  onload="this.rel='stylesheet'">
+
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  </noscript>
+
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
   <!-- Loader -->
@@ -19,7 +35,10 @@
 
   <div class="header-custom">
     <div class="titulo-custom">
-      <img src="assets/image/logo.png" alt="logo">
+      <picture>
+        <source media="(768px)" srcset="assets/image/mobile/logo.png">
+        <img src="assets/image/logo.png" alt="logo" loading="lazy">
+      </picture>
       <h1>Cartas Vivas</h1>
     </div>
     <div class="navbar-custom">
@@ -254,101 +273,95 @@
   
               <!-- Preações -->
               <div class="sermao-mobile" id="sermao2">
+
                 <!-- Pregação 01 -->
-                <div class="videos">
-                  <iframe 
-                  width="100%" 
-                  height="100%" 
-                  src="https://www.youtube.com/embed/xS5BItrcluA" title="O Sofrimento - Culto do dia 18/03 - Madson Almeida" 
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="videos" data-id="xS5BItrcluA">
+
+                  <button>
+                     <img src="https://img.youtube.com/vi/xS5BItrcluA/hqdefault.jpg" alt="">
+                  </button>
+
                   <h3>O Sofrimento</h3>
                   <p>Madson Almeida</p>
                 </div>
-  
+
+
                 <!-- Pregação 02 -->
-                <div class="videos">
-                  <iframe 
-                  width="100%" 
-                  height="100%" 
-                  src="https://www.youtube.com/embed/LN5JuH2Ucbc" title="O Sofrimento - Culto do dia 18/03 - Madson Almeida" 
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="videos" data-id="LN5JuH2Ucbc">
+
+                  <button>
+                    <img src="https://img.youtube.com/vi/LN5JuH2Ucbc/hqdefault.jpg" alt="">
+                  </button>
+
                   <h3>A finalidade do Mandamento</h3>
                   <p>Pr. Adervan Amancio</p>
                 </div>
-  
+
                 <!-- Pregação 03 -->
-                <div class="videos">
-                 <iframe 
-                  width="100%" 
-                  height="100%" 
-                  src="https://www.youtube.com/embed/IK4ym_ihBkE" title="O Sofrimento - Culto do dia 18/03 - Madson Almeida" 
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="videos" data-id="IK4ym_ihBkE">
+
+                  <button>
+                    <img src="https://img.youtube.com/vi/IK4ym_ihBkE/hqdefault.jpg" alt="">
+                  </button>
+
                   <h3>Os Grandes Feitos do Senhor</h3>
                   <p>Pr. Adervan Amancio</p>
                 </div>
-  
+
                 <!-- Pregação 04 -->
-                <div class="videos" >
-                 <iframe 
-                  width="100%" 
-                  height="100%" 
-                  src="https://www.youtube.com/embed/-_MXiWysTFI" title="O Sofrimento - Culto do dia 18/03 - Madson Almeida" 
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="videos" data-id="-_MXiWysTFI">
+
+                  <button>
+                    <img src="https://img.youtube.com/vi/-_MXiWysTFI/hqdefault.jpg" alt="">
+                  </button>
+
                   <h3>Preciso de ti, Querido Irmão!</h3>
-                  <p>Pr. Adervan Amancio </p>
+                  <p>Pr. Adervan Amancio</p>
                 </div>
               </div>
   
               <!-- Devocionais -->
               <div class="devocional-mobile">
                 <!-- Devocional 01 -->
-                <div class="videos">
-                  <iframe 
-                  width="100%" 
-                  height="100%" 
-                  src="https://www.youtube.com/embed/8W93SI7Zkbw" title="O Sofrimento - Culto do dia 18/03 - Madson Almeida" 
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="videos" data-id="8W93SI7Zkbw">
+
+                  <button>
+                    <img src="https://img.youtube.com/vi/8W93SI7Zkbw/hqdefault.jpg" alt="Somos Cartas Vivas">
+                  </button>
+
                   <h3>Somos Cartas Vivas</h3>
                   <p>Madson Almeida</p>
                 </div>
   
                 <!-- Devocional 02 -->
-                <div class="videos">
-                  <iframe 
-                  width="100%" 
-                  height="100%" 
-                  src="https://www.youtube.com/embed/0EE7MnxOdFc" title="O Sofrimento - Culto do dia 18/03 - Madson Almeida" 
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="videos" data-id="0EE7MnxOdFc">
+
+                  <button>
+                    <img src="https://img.youtube.com/vi/0EE7MnxOdFc/hqdefault.jpg" alt="Cuidando do Próximo">
+                  </button>
+                  
                   <h3>Cuidando do Próximo</h3>
                   <p>Madson Almeida</p>
                 </div>
   
                 <!-- Devocional 03 -->
-                <div class="videos">
-                  <iframe 
-                  width="100%" 
-                  height="100%" 
-                  src="https://www.youtube.com/embed/DGvE6HT654w" title="O Sofrimento - Culto do dia 18/03 - Madson Almeida" 
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="videos" data-id="DGvE6HT654w">
+
+                  <button>
+                    <img src="https://img.youtube.com/vi/DGvE6HT654w/hqdefault.jpg" alt="Fome e Sede de Deus">
+                  </button>
+
                   <h3>Fome e Sede de Deus</h3>
                   <p>Madson Almeida</p>
                 </div>
   
                 <!-- Devocional 04 -->
-                <div class="videos">
-                  <iframe 
-                  width="100%" 
-                  height="100%" 
-                  src="https://www.youtube.com/embed/8kcpYq9JZPg" title="O Sofrimento - Culto do dia 18/03 - Madson Almeida" 
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="videos" data-id="8kcpYq9JZPg">
+
+                  <button>
+                    <img src="https://img.youtube.com/vi/8kcpYq9JZPg/hqdefault.jpg" alt="Você será uma benção">
+                  </button>
+
                   <h3>Você será uma benção</h3>
                   <p>Madson Almeida</p>
                 </div>
@@ -358,55 +371,43 @@
                <div class="louvores-mobile">
   
                 <!-- Louvor 1 -->
-                 <div class="videos">
-                  <iframe 
-                  width="100%" 
-                  height="100%" 
-                  src="https://www.youtube.com/embed/Is0FfAtbyfU" title="O Sofrimento - Culto do dia 18/03 - Madson Almeida" 
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                 <div class="videos" data-id="Is0FfAtbyfU">
+                  <button>
+                    <img src="https://img.youtube.com/vi/Is0FfAtbyfU/hqdefault.jpg" alt="O Escudo e as Setas">
+                  </button>
                   <h3>O Escudo e as Setas</h3>
                   <p>Madson Almeida</p>
                  </div>
   
                 <!-- Louvor 2 -->
-                 <div class="videos">
-                  <iframe 
-                  width="100%" 
-                  height="100%" 
-                  src="https://www.youtube.com/embed/8kcpYq9JZPg" title="O Sofrimento - Culto do dia 18/03 - Madson Almeida" 
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                 <div class="videos" data-id="8kcpYq9JZPg">
+                  <button>
+                    <img src="https://img.youtube.com/vi/8kcpYq9JZPg/hqdefault.jpg" alt="Um Coração Livre">
+                  </button>
                   <h3>Um Coração Livre</h3>
                   <p>Madson Almeida</p>
-               </div>
+                </div>
   
                 <!-- Louvor 3 -->
-                 <div class="videos">
-                  <iframe 
-                  width="100%" 
-                  height="100%" 
-                  src="https://www.youtube.com/embed/8kcpYq9JZPg" title="O Sofrimento - Culto do dia 18/03 - Madson Almeida" 
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                 <div class="videos" data-id="DGvE6HT654w">
+                  <button>
+                    <img src="https://img.youtube.com/vi/DGvE6HT654w/hqdefault.jpg" alt="De Volta aos Braços Teus">
+                  </button>
                   <h3>De Volta aos Braços Teus</h3>
                   <p>Madson Almeida</p>
-               </div>
+                </div>
   
                 <!-- Louvor 4 -->
-                 <div class="videos">
-                  <iframe 
-                  width="100%" 
-                  height="100%" 
-                  src="https://www.youtube.com/embed/8kcpYq9JZPg" title="O Sofrimento - Culto do dia 18/03 - Madson Almeida" 
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="videos" data-id="n-Nux_W0uXo">
+                  <button>
+                    <img src="https://img.youtube.com/vi/n-Nux_W0uXo/hqdefault.jpg" alt="O Que Aprendi Com Você">
+                  </button>
                   <h3>O Que Aprendi Com Você</h3>
                   <p>Madson Almeida</p>
-               </div>
-               </div>
-          </div>
+                </div>
         </div>
+        </div>
+       </div>
 
 
       <div class="biblia-on">
@@ -450,5 +451,24 @@
   </footer>
 
   <script src="assets/Js/script.js"></script>
+
+  <script>
+document.querySelectorAll(".videos").forEach(el => {
+  el.addEventListener("click", function() {
+    const id = el.dataset.id;
+    const img = el.querySelector("img") || el.querySelector("button img");
+    
+    if (img) {
+      const iframe = document.createElement("iframe");
+      iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
+      iframe.width = "100%";
+      iframe.height = "100%";
+      iframe.frameBorder = "0";
+      iframe.allowFullscreen = true;
+      img.replaceWith(iframe);
+    }
+  });
+});
+</script>
 </body>
 </html>

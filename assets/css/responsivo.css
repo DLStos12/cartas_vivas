@@ -29,6 +29,13 @@
     height: 200px;
   }
 
+  .header-custom{
+    background-image: url('../image/mobile/header-background-widescream.webp');
+    background-size: cover;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+  }
+
   .titulo-custom h1 {
     text-align: center;
     font-size: 34px;
@@ -108,6 +115,18 @@
   .videos h3{
     text-align: center;
     font-size: 18px;
+  }
+
+  .videos button {
+    border: none;
+    margin: auto;
+    width: 100%;
+}
+
+  .videos img{
+    width: 100%;
+    border-radius: 5px;
+    margin: auto;
   }
 
   .devocional-mobile, .louvores-mobile{
@@ -355,9 +374,10 @@
     font-size: 12px;
   }
   
-  .videos img {
-    width: 80px;
-    height: 80px;
+  .videos img{
+    width: 100%;
+    border-radius: 5px;
+    margin: auto;
   }
   
   /* Player Principal */
