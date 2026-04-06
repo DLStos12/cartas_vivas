@@ -622,7 +622,35 @@ hr{
 }
 
 /* Label de estudo */
+
+.fechar{
+  position: absolute;
+  left: 15px;
+  top: 5px;
+  border: none;
+  background-color: transparent;
+  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.445);
+
+  font-size: 35px;
+  color: var(--color-primary);
+}
+
+.fechar:active{
+  scale: 0.9;
+}
+
+.estudo.aberto{
+  display: block;
+  animation: esmaecerEstudo 0.55s ease forwards;
+}
+
+@keyframes esmaecerEstudo{
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .estudo{
+  display: none;
   position: absolute;
   background-color: rgb(255, 255, 255);
   border: 2px solid black;
@@ -633,6 +661,7 @@ hr{
   margin-top: 5px;
   text-align: center;
   padding: 10px;
+
 }
 
 .estudo h2{
@@ -645,35 +674,11 @@ hr{
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.445);
 }
 
-.sugestao-estudo{
-  height: 90%;
-  width: 25%;
-  overflow: hidden;
-  overflow-y: scroll;
-  margin-left: 5%;
-}
-
-.sugestao-estudo h5{
-  text-align: center;
-  position: sticky;
-  top: 0;
-  background-color: var(--color-primary);
-  z-index: 9999;
-  border-radius: 10px;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.445);
-}
-
 .container-estudo{
-  display: flex;
+  display: grid;
+  grid-template-columns: 3fr 3fr;
   height: 90%;
-}
+  gap: 3px;
 
-.player-principal-estudo{
-  background-color: var(--color-section1);
-  margin: auto;
-  margin-left: 2%;
-  width: 800px;
-  height: 470px;
-  border-radius: 10px;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.253);
+  overflow-y: scroll;
 }

@@ -81,8 +81,6 @@ function mostrarSermaoMobile(){
         sermao.style.opacity = '1';
     }, 100);
 }
-
-
 function mostrarDevocionalMobile(){
     const devocional = document.querySelector('.devocional-mobile');
 
@@ -119,6 +117,37 @@ function mostrarLouvoresMobile(){
 
 
 
+// Abrir e fechar a aba de estudo
+function abrirEstudo(id){
+    const estudo = document.getElementById(id);
+    if (estudo) {
+        estudo.classList.add("aberto");
+    }
+}
+
+function fecharEstudo(botao){
+    const estudo = botao.closest(".estudo");
+    if (estudo) {
+        estudo.classList.remove("aberto");
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const botoesAbrir = document.querySelectorAll(".abrir-estudo");
+    botoesAbrir.forEach(botao => {
+        botao.addEventListener("click", (event) => {
+            event.preventDefault();
+            abrirEstudo(botao.dataset.target);
+        });
+    });
+
+    const botoesFechar = document.querySelectorAll(".estudo .fechar");
+    botoesFechar.forEach(botao => {
+        botao.addEventListener("click", () => fecharEstudo(botao));
+    });
+});
+
+
 // função para abrir o video recomendado
 function abrirRecomendado(){
     document.getElementById("abaRecomendado").style.display ="block";
@@ -145,25 +174,29 @@ function fecharVersiculo(){
 
 
 // Função para enviar pedido de oração
-document.getElementById("formOracao").addEventListener("submit", function(e){
-    e.preventDefault();
+const formOracao = document.getElementById("formOracao");
 
-    const nome= document.getElementById('nome').value;
-    const pedido = document.getElementById('pedido').value;
+if (formOracao) {
+    formOracao.addEventListener("submit", function(e){
+        e.preventDefault();
 
-    const url= "https://docs.google.com/forms/d/e/1FAIpQLSdQjYyZ7P2EIrPOgBH9MaNK9_s4_lCwmhgnlXW3A7BZ_FIZkA/formResponse";
+        const nome= document.getElementById('nome').value;
+        const pedido = document.getElementById('pedido').value;
 
-    const dados = new FormData();
-    dados.append("entry.243779129", nome);
-    dados.append("entry.1025573461", pedido);
+        const url= "https://docs.google.com/forms/d/e/1FAIpQLSdQjYyZ7P2EIrPOgBH9MaNK9_s4_lCwmhgnlXW3A7BZ_FIZkA/formResponse";
 
-    fetch(url, {
-        method: "POST",
-        mode: "no-cors",
-        body: dados
-    }).then(() => {
-        document.getElementById("menssagem").innerText = "Pedido Enviado! Estaremos orando por você!";
+        const dados = new FormData();
+        dados.append("entry.243779129", nome);
+        dados.append("entry.1025573461", pedido);
 
-    document.getElementById("formOracao").reset();
+        fetch(url, {
+            method: "POST",
+            mode: "no-cors",
+            body: dados
+        }).then(() => {
+            document.getElementById("menssagem").innerText = "Pedido Enviado! Estaremos orando por você!";
+
+            document.getElementById("formOracao").reset();
+        });
     });
-});
+}
