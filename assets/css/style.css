@@ -682,3 +682,25 @@ hr{
 
   overflow-y: scroll;
 }
+
+.card-container{
+  display:flex;
+  width: 90%;
+  margin:auto;
+}
+
+.card{
+  width: 20%;
+
+}
+
+.card-title{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-text{
+  font-size: 14px;
+  text-align: justify;
+  width: 90%;
+}
