@@ -280,6 +280,14 @@
     width: 90%;
     margin: auto;
     margin-bottom:5%;
+    margin-top:5%;
+  }
+
+  .estudo{
+    position: absolute;
+    top: 15%;
+    z-index:99;
+    height: 94%;
   }
 }
 
