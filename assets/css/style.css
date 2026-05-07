@@ -675,7 +675,7 @@ hr{
 }
 
 .container-estudo{
-  display: grid;
+  display: block;
   grid-template-columns: 3fr 3fr;
   height: 90%;
   gap: 3px;
