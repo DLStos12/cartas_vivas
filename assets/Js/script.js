@@ -6,7 +6,7 @@ window.addEventListener('load', function() {
     }
 });
 
-// Função de trocar video
+// Função de trocar vídeo
 function trocarVideo(id){
     const player =document.getElementById('player');
 
@@ -14,7 +14,7 @@ function trocarVideo(id){
 }
 
 
-// Função que troca as abas de videos nas sugestões
+// Função que troca as abas de vídeos nas sugestões
 function mostrarSermao(){
     const sermao = document.querySelector('.sermao');
 
@@ -64,7 +64,7 @@ function mostrarLouvores(){
     }, 100);
 }
 
-// Função que troca as abas de videos nas sugestões
+// Função que troca as abas de vídeos nas sugestões
 function mostrarSermaoMobile(){
     const sermao = document.querySelector('.sermao-mobile');
 
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// função para abrir o video recomendado
+// Função para abrir o vídeo recomendado
 function abrirRecomendado(){
     document.getElementById("abaRecomendado").style.display ="block";
 }
@@ -159,7 +159,7 @@ function fecharRecomendado(){
 
 
 
-// função para abrir o versiculo recomendado
+// Função para abrir o versículo recomendado
 function abrirVersiculo(){
     document.getElementById("abaVersiculo").style.display ="block";
 }

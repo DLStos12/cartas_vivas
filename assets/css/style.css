@@ -118,7 +118,7 @@ main{
   width: 100%;
 }
 
-/* Aba de sugestões de videos */
+/* Aba de sugestões de vídeos */
 .sugestao{
   background-color: var(--color-section);
   width: 600px;
@@ -172,7 +172,7 @@ main{
   text-align: center;
 }
 
-/* Aba de videos sugestivos */
+/* Aba de vídeos sugestivos */
 .lista-sugestao{
   background-color: var(--color-section);
   margin-top: 20px;
@@ -392,7 +392,7 @@ main{
   padding-right: 20px;
 }
 
-/* Banner Biblia Online */
+/* Banner Bíblia Online */
 .biblia-on{
   background-image: url("../image/biblia-on-backgroung-wide.png");
   background-size: cover;
