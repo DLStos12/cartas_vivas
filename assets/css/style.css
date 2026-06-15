@@ -683,7 +683,7 @@ hr{
   overflow-y: scroll;
 }
 
-.card-container{
+.card-container-estudos{
   display:flex;
   width: 90%;
   margin:auto;
@@ -703,4 +703,61 @@ hr{
   font-size: 14px;
   text-align: justify;
   width: 90%;
+}
+
+.estudos-contain{
+  width: 90%;
+}
+
+.estudos-contain h1{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.estudos-contain h1::after{
+  content: "";
+  display: block;
+  width: 90%;
+  height: 3px;
+  background-color: var(--color-primary);
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.link-card{
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.card{
+  position: relative;
+  overflow: hidden;
+}
+
+.card-body{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-body h5{
+  font-weight: bold;
+  text-align: center;
+}
+
+.card > .card-body{
+  display:none;
+}
+
+.card:hover > .card-body{
+  display:block;
 }
