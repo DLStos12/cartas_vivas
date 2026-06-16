@@ -497,6 +497,23 @@ main{
   height: 200px;
 }
 
+#pedido:focus{
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+form textarea{
+  resize: none;
+  width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: 3.7%;        /* empurra pra direita */
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 10px;
+}
+
 .pedidos button{
   background-color: rgb(243, 103, 17);
   border: none;
