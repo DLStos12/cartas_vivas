@@ -791,3 +791,5 @@ hr{
 .card:hover > .card-body{
   display:block;
 }
+/* Preserva os parágrafos da reflexão editados pelo painel. */
+#verse-text{white-space:pre-line}

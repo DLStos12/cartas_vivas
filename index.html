@@ -218,7 +218,7 @@
 
       <div class="recomendado" id="abaRecomendado">
         <iframe
-          id="player"
+          id="featured-player"
           width="90%"
           height="90%"
           src="https://www.youtube.com/embed/pchMw1k95_o"
@@ -226,7 +226,7 @@
           allowfullscreen>
         </iframe>
         <div class="foot-recomendado">
-          <h2>Volta para o Pai: Pr. Elizeu Rodrigues</h2>
+          <h2 id="featured-title">Volta para o Pai: Pr. Elizeu Rodrigues</h2>
           <button onclick="fecharRecomendado()">Fechar</button>
         </div>
       </div>
@@ -235,9 +235,9 @@
         <div class="rec-container">
           <img src="assets/image/versiculo-semanal.png" alt="versículo semanal">
           <div class="reflexao">
-            <h2 style="text-align: center;">João 1:1-5</h2>
+            <h2 id="verse-reference" style="text-align: center;">João 1:1-5</h2>
             <br>
-            <p>
+            <p id="verse-text">
             João inicia seu evangelho nos levando para antes da criação do mundo. Antes de existir o céu, a terra, os mares, os anjos ou os homens, Cristo já existia. Ele não foi criado; Ele é eterno. Aquele que nasceu em Belém é o mesmo que estava com o Pai desde toda a eternidade.
               <br>
             Ao chamar Jesus de "Palavra" (Logos), João nos mostra que Cristo é a revelação perfeita de Deus. Se queremos conhecer quem Deus é, devemos olhar para Jesus. Nele vemos o amor, a justiça, a santidade e a graça do Pai.
@@ -464,6 +464,7 @@
   </footer>
 
   <script src="assets/Js/script.js"></script>
+  <script src="assets/Js/content.js" defer></script>
 
   <script>
 document.querySelectorAll(".videos-mobile").forEach(el => {
